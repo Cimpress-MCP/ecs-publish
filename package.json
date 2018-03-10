@@ -1,0 +1,54 @@
+{
+  "name": "@cimpresscloud/ecs-publish",
+  "description": "Infrastructure as code and single-command deployments of services running in AWS ECS",
+  "version": "1.0.0",
+  "author": "Christian Moore <cmoore@cimpress.com>",
+  "bin": {
+    "ecs-publish": "./ecs-publish.js"
+  },
+  "bugs": {
+    "url": "https://github.com/cimpress-mcp/ecs-publish/issues"
+  },
+  "homepage": "https://github.com/cimpress-mcp/ecs-publish",
+  "issues": "https://github.com/cimpress-mcp/ecs-publish/issues",
+  "keywords": [
+    "aws",
+    "ecs",
+    "docker",
+    "deploy",
+    "task",
+    "service",
+    "release",
+    "workflow",
+    "ci"
+  ],
+  "license": "Apache-2.0",
+  "main": "./ecs-publish.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cimpress-mcp/ecs-publish.git"
+  },
+  "scripts": {
+    "lint": "eslint . --fix",
+    "depcheck": "depcheck --ignores serverless-plugin* && (npm outdated || true) && nsp check",
+    "preflight": "npm run lint && npm run depcheck"
+  },
+  "devDependencies": {
+    "depcheck": "^0.6.9",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nsp": "^3.1.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.207.0",
+    "chalk": "^2.3.2",
+    "cmd-spawn": "^1.4.0",
+    "commander": "^2.15.0",
+    "envfile": "^2.3.0",
+    "git-repo-info": "^1.4.1"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "example",
+  "description": "An example project for demonstrating the use of ecs-publish",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "depcheck": "depcheck --detectors expressViewEngine,requireCallExpression && nsp check && npm outdated",
+    "build": "ecs-publish build",
+    "push": "ecs-publish push",
+    "obtain-certificate": "ecs-publish obtain-certificate",
+    "launch": "ecs-publish launch",
+    "deploy": "ecs-publish deploy",
+    "unlaunch": "ecs-publish unlaunch"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "helmet": "^3.11.0",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "depcheck": "^0.6.9",
+    "dotenv": "^5.0.1",
+    "ecs-publish": "file:..",
+    "nsp": "^3.2.1"
+  }
+}

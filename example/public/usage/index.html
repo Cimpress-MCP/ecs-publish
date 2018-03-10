@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Commands &mdash; ecs-publish 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="ecs-publish 1 documentation" href="../index.html"/>
+        <link rel="prev" title="Service" href="../config/service.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ecs-publish
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html#install">Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../config/gitbranch.html">Git Branch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config/gitbranch.html#current-branch">Current Branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config/gitbranch.html#setting-node-env-based-on-branch">Setting NODE_ENV based on branch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config/taskrole.html">Task Role</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config/taskdefinition.html">Task Definition Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config/targetgroup.html">Target Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config/service.html">Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config/index.html#ecs-publish-json">ecs-publish.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config/index.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#validate">validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build">build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push">push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-launch">test-launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launch">launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unlaunch">unlaunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtain-certificate">obtain-certificate</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ecs-publish</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Commands</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<p>ecs-publish has several commands.</p>
+<p>Glossary, for the purposes of this section:</p>
+<dl class="docutils">
+<dt>Ensure</dt>
+<dd>ecs-publish will check to see if a resource already exists, and will create it if needed.</dd>
+<dt>Confirm</dt>
+<dd>ecs-publish will check if a resource is in a particular state, and will error if it is not.</dd>
+</dl>
+<div class="section" id="validate">
+<h2>validate<a class="headerlink" href="#validate" title="Permalink to this headline">¶</a></h2>
+<p>Validate your ecs-publish.json</p>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">validate</span></code></p>
+</div>
+<div class="section" id="build">
+<h2>build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<p>Build and tag your Docker image</p>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">build</span></code></p>
+</div>
+<div class="section" id="push">
+<h2>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<p>Push an image to ECR, creating the repository if needed.</p>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">push</span></code></p>
+<ol class="arabic simple">
+<li>Validate AWS credentials</li>
+<li>Ensure an ECR repository exists for your package</li>
+<li>Confirm an image with the same tag doesn’t already exist in the repository</li>
+<li>Tag your image for the repository</li>
+<li>Get an ECR Authorization Token</li>
+<li>Login to ECR</li>
+<li>Push your image to the repository</li>
+</ol>
+</div>
+<div class="section" id="test-launch">
+<h2>test-launch<a class="headerlink" href="#test-launch" title="Permalink to this headline">¶</a></h2>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">test-launch</span></code></p>
+<p>Launch your package as a standalone task in ECS, confirm the task runs for 30 seconds, then stop the task.</p>
+<ol class="arabic simple">
+<li>Validate AWS credentials</li>
+<li>Ensure an ECR repository exists for your package</li>
+<li>Confirm an image with the correct tag already exists in the repository</li>
+<li>Ensure your Task Role exists</li>
+<li>Ensure your Task Role Policy is up to date</li>
+<li>Register a new Task Definition</li>
+<li>Run a standalone task in your ECS cluster</li>
+<li>Confirm the task stays running for 30 seconds</li>
+<li>Stop the standalone task</li>
+</ol>
+</div>
+<div class="section" id="launch">
+<h2>launch<a class="headerlink" href="#launch" title="Permalink to this headline">¶</a></h2>
+<p>Launch your package as a service in ECS, creating a target group, ALB listener rules, ECS service, and Route 53 record set.</p>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">launch</span></code></p>
+<ol class="arabic simple">
+<li>Validate AWS credentials</li>
+<li>Ensure an ECR repository exists for your package</li>
+<li>Confirm an image with the correct tag already exists in the repository</li>
+<li>Ensure your Task Role exists</li>
+<li>Ensure your Task Role Policy is up to date</li>
+<li>Register a new Task Definition</li>
+<li>Ensure a properly named Target Group exists</li>
+<li>Update Target Group Attributes</li>
+<li>Confirm the Load Balancer you specified exists</li>
+<li>Ensure Target Group is in the Load Balancer listener ports you specify</li>
+<li>Confirm the ACM Certificate you specified has been issued</li>
+<li>Ensure the ACM Certificate is in the load balancer (assumes Listener port 443)</li>
+<li>Ensure a properly named ECS Service exists</li>
+<li>Update the ECS Service with the current Task Definition</li>
+<li>Ensure the Route 53 Resource Record is up to date</li>
+</ol>
+</div>
+<div class="section" id="deploy">
+<h2>deploy<a class="headerlink" href="#deploy" title="Permalink to this headline">¶</a></h2>
+<p>Usage: <code class="docutils literal notranslate"><span class="pre">ecs-publish</span> <span class="pre">deploy</span></code></p>
+<p>The equivalent of:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ecs-publish build
+ecs-publish push
+ecs-publish launch
+</pre></div>
+</div>
+</div>
+<div class="section" id="unlaunch">
+<h2>unlaunch<a class="headerlink" href="#unlaunch" title="Permalink to this headline">¶</a></h2>
+<p>Remove the service, target group, and listener rules for the current branch.</p>
+</div>
+<div class="section" id="obtain-certificate">
+<h2>obtain-certificate<a class="headerlink" href="#obtain-certificate" title="Permalink to this headline">¶</a></h2>
+<p>Request a certificate for your service, or display the ARN of a compatible existing certificate.</p>
+<p>Since ecs-publish creates subdomains for non-default branch environments, the certificate it requests (and expects) must have a wildcard <code class="docutils literal notranslate"><span class="pre">SubjectAlternativeName</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../config/service.html" class="btn btn-neutral" title="Service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cimpress.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+   
+
+</body>
+</html>
