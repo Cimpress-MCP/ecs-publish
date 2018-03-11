@@ -29,11 +29,11 @@ Adding additional fields to this file will enable additional features, e.g.
 
   {
     "region": "us-east-1",
-    "defaultBranch": "prod",
-    "taskRole": {  },
-    "taskDefinitionTemplate":  {  },
-    "targetGroup":  {  },
-    "service":  {  }
+    "branches": { },
+    "taskRole": { },
+    "taskDefinitionTemplate":  { },
+    "targetGroup":  { },
+    "service":  { }
   }
 
 #######
