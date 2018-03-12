@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                v1.0.1
+                v1.0.2
               </div>
             
           
@@ -213,6 +213,17 @@
 <p>A complete example <code class="docutils literal notranslate"><span class="pre">ecs-publish.json</span></code> might look like:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;branches&quot;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NODE_ENV&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span> <span class="p">{</span>
+    <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NODE_ENV&quot;</span><span class="p">:</span> <span class="s2">&quot;development&quot;</span>
+  <span class="p">},</span> <span class="p">{</span>
+    <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NODE_ENV&quot;</span><span class="p">:</span> <span class="s2">&quot;local&quot;</span>
+  <span class="p">}],</span>
   <span class="nt">&quot;taskRole&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;policyDocument&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>

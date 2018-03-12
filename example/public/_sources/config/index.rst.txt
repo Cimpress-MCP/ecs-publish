@@ -46,6 +46,17 @@ A complete example ``ecs-publish.json`` might look like:
 
   {
     "region": "us-east-1",
+    "branches": [{
+      "pattern": "master",
+      "NODE_ENV": "production",
+      "default": true
+    }, {
+      "pattern": "dev",
+      "NODE_ENV": "development"
+    }, {
+      "pattern": ".*",
+      "NODE_ENV": "local"
+    }],
     "taskRole": {
       "policyDocument": {
         "Version": "2012-10-17",
