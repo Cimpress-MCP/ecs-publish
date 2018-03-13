@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.0.2
+                v1.0.3
               </div>
             
           
@@ -117,6 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#launch">launch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deploy">deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unlaunch">unlaunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generate-iam-policy">generate-iam-policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#obtain-certificate">obtain-certificate</a></li>
 </ul>
 </li>
@@ -268,6 +269,11 @@ ecs-publish launch
 <div class="section" id="unlaunch">
 <h2>unlaunch<a class="headerlink" href="#unlaunch" title="Permalink to this headline">¶</a></h2>
 <p>Remove the service, target group, and listener rules for the current branch.</p>
+</div>
+<div class="section" id="generate-iam-policy">
+<h2>generate-iam-policy<a class="headerlink" href="#generate-iam-policy" title="Permalink to this headline">¶</a></h2>
+<p>Generate an IAM policy for your CI/CD infrasturcture.</p>
+<p>This command will output a JSON document for attaching to the IAM user or role that will be performing CI/CD tasks using ecs-publish.</p>
 </div>
 <div class="section" id="obtain-certificate">
 <h2>obtain-certificate<a class="headerlink" href="#obtain-certificate" title="Permalink to this headline">¶</a></h2>
