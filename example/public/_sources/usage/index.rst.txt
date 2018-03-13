@@ -105,6 +105,15 @@ unlaunch
 
 Remove the service, target group, and listener rules for the current branch.
 
+###################
+generate-iam-policy
+###################
+
+Generate an IAM policy for your CI/CD infrasturcture.
+
+This command will output a JSON document for attaching to the IAM user or role that will be performing CI/CD tasks using ecs-publish.
+
+
 ##################
 obtain-certificate
 ##################
