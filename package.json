@@ -1,7 +1,7 @@
 {
   "name": "@cimpresscloud/ecs-publish",
   "description": "Infrastructure as code and single-command deployments of services running in AWS ECS",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Christian Moore <cmoore@cimpress.com>",
   "bin": {
     "ecs-publish": "./ecs-publish.js"
