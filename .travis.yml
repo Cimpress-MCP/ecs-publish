@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+script:
+- npm run preflight
+
+deploy:
+  provider: npm
+  email: norm.maclennan@gmail.com
+  api_key: $NPM_API_KEY
+  on:
+    tags: true
+    branch: master
+    repo: Cimpress-MCP/ecs-publish
