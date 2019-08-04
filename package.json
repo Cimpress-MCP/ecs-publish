@@ -1,7 +1,7 @@
 {
   "name": "@cimpresscloud/ecs-publish",
   "description": "Infrastructure as code and single-command deployments of services running in AWS ECS",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "author": "Christian Moore <cmoore@cimpress.com>",
   "bin": {
     "ecs-publish": "./ecs-publish.js"
@@ -29,21 +29,20 @@
     "url": "git://github.com/cimpress-mcp/ecs-publish.git"
   },
   "scripts": {
-    "lint": "eslint . --fix",
-    "depcheck": "depcheck --ignores serverless-plugin* && (npm outdated || true) && npm audit",
-    "preflight": "npm run lint && npm run depcheck"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preflight": "npm run lint && npm audit"
   },
   "devDependencies": {
-    "depcheck": "^0.8.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0"
   },
   "dependencies": {
-    "aws-sdk": "^2.460.0",
+    "aws-sdk": "^2.503.0",
     "chalk": "^2.4.2",
     "cmd-spawn": "^1.4.0",
     "commander": "^2.20.0",

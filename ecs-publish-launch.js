@@ -6,7 +6,7 @@ const path = require('path'),
   dockerfilePath = path.resolve(process.cwd(), 'Dockerfile'),
   lib = require('./lib');
 
-lib.validator.validateConfig({cfgPath, pkgPath, dockerfilePath})
+lib.validator.validateConfig({ cfgPath, pkgPath, dockerfilePath })
   .then(lib.validator.validateAwsCredentials)
   .then(lib.ecrMgr.ensureRepositoryExists)
   .then(lib.ecrMgr.ensureRemoteTagDoesExist)
